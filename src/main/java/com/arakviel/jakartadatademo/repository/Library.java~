@@ -1,0 +1,15 @@
+package com.arakviel.jakartadatademo.repository;
+
+import com.arakviel.jakartadatademo.entity.Book;
+import jakarta.data.repository.Find;
+import jakarta.data.repository.Insert;
+import jakarta.data.repository.Repository;
+
+@Repository
+public interface Library {
+    @Find
+    Book book(String isbn);
+
+    @Insert
+    void add(Book book);
+}
